@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./View/css/detail-product.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <link rel="stylesheet" href="assets/css/fontawesome.min.css"> -->
+    <script src="./View/js/details.js"></script>
+    <script src="https://kit.fontawesome.com/45a3cadf75.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <title>Sản phẩm</title>
+</head>
+<body>
+    <!-- Start Top Nav -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
+        <div class="container text-light">
+            <div class="w-100 d-flex justify-content-between">
+                <div>
+                    <i class="fa fa-envelope mx-2"></i>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@company.com">info@company.com</a>
+                    <i class="fa fa-phone mx-2"></i>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+                </div>
+                <div>
+                    <a class="text-light" href="https://fb.com/" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin fa-sm fa-fw"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Top Nav -->
+
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+                Zay
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://localhost/milktea/">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Về chúng tôi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Cửa hàng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Liên hệ</a>
+                        </li>
+                        <?php if(isset($_SESSION['role']) && $_SESSION['role'] == 1):?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="?action=manager&categories_manager">Quản lí</a>
+                            </li>
+                        <?php endif;?>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar align-self-center d-flex">
+                <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
+                        <div class="input-group-text">
+                            <i class="fa fa-fw fa-search"></i>
+                        </div>
+                    </div>
+                </div>
+                <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                    <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                </a>
+                <a class="nav-icon position-relative text-decoration-none" href="?action=cart">
+                    <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                    <!-- <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span> -->
+                </a>
+                <?php 
+                    if(isset($_SESSION['username'])){
+                        ?>
+                            <a class="nav-icon position-relative text-decoration-none" href="?action=account">
+                                <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                            </a>
+                        <?php
+                    }else{
+                        ?>
+                            <a class="nav-icon position-relative text-decoration-none" href="?action=login">
+                                <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                            </a>
+                        <?php
+                    }
+                ?>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+    <!-- Modal -->
+    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <button type="submit" class="input-group-text bg-success text-light">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="container product-detail">
+        <div class="row">
+            <?php 
+                if(isset($productID)){
+                    ?>
+                    <div class="col-lg-5 col-md-5 col-xs-5 col-5 col-left">
+                        <img src="<?php echo $productID['img']; ?>" alt="product" >
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-xs-7 col-7 col-right">
+                        <?php
+                        if(isset($check) && $check == 1){
+                            ?>
+                            <div class="message">
+                                <h5>Thêm giỏ hàng thành công!!</h5>
+                            </div>
+                            <?php
+                        }
+                        ?>
+                        <h4 class='title'><?php echo $productID['title']; ?></h4>
+                        <p class="descrip">
+                            <?php echo $productID['descrip']; ?>
+                        </p>
+                        <div class="price">
+                            <?php
+                            if(isset($productID['sale_price'])){
+                                ?>
+                                <span class="del-price">
+                                    <del><?php echo $productID['regular_price']; ?> đ</del>
+                                </span>
+                                <span class="sale-price">
+                                    <ins><?php echo $productID['sale_price']; ?> đ</ins> 
+                                </span>
+                                <?php
+                            }else{
+                                ?>
+                                <span><?php echo $productID['price']; ?> đ</span>
+                                <?php
+                            }
+                            ?>
+                        </div>
+                        <form class="cart" method="POST">
+                            <div class="quantity-button">
+                                <input type="hidden" name="title" value="<?php echo $productID['title']; ?>">
+                                <input type="hidden" name="image" value="<?php echo $productID['img']; ?>">
+                                <input type="hidden" name="price" value="<?php echo $productID['price']; ?>">
+                                <input type="hidden" name="id_product" value="<?php echo $productID['id']; ?>">
+                                <?php
+                                    if(isset($_SESSION['username'])){
+                                        ?>
+                                        <input type="hidden" name="username" value="<?php echo $_SESSION['username']; ?>">
+                                        <?php
+                                    }
+                                ?>
+                                <div class="add-cart">
+                                    <div class="quantity">
+                                        <button type="button" class="minus quantity-down">-</button>
+                                        <input type="number" name="quantity" id="typeNumber" class="input-text qty text input-number" min="1" max="100" value="1">
+                                        <button type="button" class="plus quantity-up">+</button>
+                                    </div>
+                                    <input type="submit" class="single_add_to_cart_button button alt" name="add_to_cart" value="Thêm vào giỏ hàng">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <?php
+                }
+            ?>
+        </div>
+    </div>
+</body>
+</html>

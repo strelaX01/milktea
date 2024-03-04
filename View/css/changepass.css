@@ -1,0 +1,25 @@
+.changepass{
+    margin-top: 35px;
+}
+.changepass h4,
+.changepass .action,
+.changepass .message{
+    text-align: center;
+}
+.changepass .action{
+    margin-bottom: 20px;
+}
+.changepass .form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.changepass .form .passold,
+.changepass .form .passnew,
+.changepass .form .repassnew{
+    margin-bottom: 20px;
+}
+.changepass .form p{
+    margin: 5px;
+}

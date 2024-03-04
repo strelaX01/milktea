@@ -1,0 +1,64 @@
+/*
+Custom Css
+*/
+body{
+    overflow-x: hidden;
+}
+.banner img{
+    width: 100%;
+}
+button.navbar-toggler.border-0{
+    position: absolute;
+    right: 0;
+    z-index: 100;
+}
+.navbar.align-self-center.d-flex{
+    padding-right: 50px;
+}
+.navbar.align-self-center.d-flex a{
+    padding: 0 10px;
+}
+img.card-img-top{
+    height: 340px;
+}
+.img-fluid{
+    width: 100%;
+}
+.col-product .card.h-100{
+    overflow: hidden;
+    position: relative;
+}
+.col-product .card.h-100 .icon-cart{
+    width: 60px;
+    height: 60px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1000;
+    top: 10px;
+    right: -100%;
+    border-radius: 50%;
+    opacity: 0;
+    background-color: #dedbdb;
+    transition: all .5s !important;
+}
+.col-product {
+    padding: 0 10px;
+} 
+.col-product .title-product{
+    height: 80px;
+}
+.col-product img{
+    transition: all .3s;
+}
+.col-product:hover .card.h-100 .icon-cart{
+    opacity: 1;
+    right: 10px;
+    transition: all .5s !important;
+}
+.col-product:hover img{
+    transform: scale(1.1);
+    transition: all .3s;
+}

@@ -1,0 +1,90 @@
+.product-detail{
+    margin-top: 35px;
+}
+.product-detail .message{
+    margin: 20px 0px;
+}
+.product-detail img{
+    width: 100%;
+}
+.product-detail form.cart {
+    margin-top: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.product-detail .col-right{
+    margin-top: 20px;
+}
+.product-detail .col-right .quantity{
+    margin: 0; 
+    height: 50px; 
+    display: flex;
+    margin-right: 7px;
+    position: relative;
+}
+.product-detail .col-right .add-cart{
+    display: flex;
+}
+.product-detail .col-right .add-cart input#typeNumber{
+    text-align: center;
+}
+.product-detail .col-right button.minus.quantity-down,
+.product-detail .col-right button.plus.quantity-up{
+    outline: none;
+    border: none;
+    background: none;
+    position: absolute;
+    text-align: center;
+    transform: translateY(32%);
+}
+.product-detail .col-right button.minus.quantity-down{
+    left: 5px;
+}
+.product-detail .col-right button.plus.quantity-up{
+    right: 5px;
+}
+.product-detail .col-right input#typeNumber{
+    width: 80px;
+    border-radius: 30px;
+}
+
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.product-detail .col-right .single_add_to_cart_button{
+    background: #626262;
+    color: #fff;
+    padding: 0 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    font-size: 15px;
+    font-weight: 500;
+    /* display: inline-block; */
+    width: 100%;
+    text-align: center;
+    border-radius: 35px;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    -ms-border-radius: 35px;
+    -o-border-radius: 35px;
+    position: relative;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}

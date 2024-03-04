@@ -1,0 +1,66 @@
+.manager,
+.add-categories,
+.add-product{
+    margin-top: 35px;
+}
+.manager a{
+    text-decoration: none;
+}
+.manager .thumb img{
+    width: 75px;
+    height: 75px;
+}
+.manager .col-2{
+    border-right: 1px solid;
+}
+.manager h3,
+.manager h4,
+.manager .action,
+.add-categories h3,
+.add-categories .action,
+.add-categories .form-cate,
+.add-product h3,
+.add-product .action,
+.add-product .form-product
+{
+    text-align: center;
+}
+.add-product .form-product div{
+    margin: 10px 0;
+}
+.add-product .form-product .cate select{
+    width: 325px;
+}
+.add-product .form-product input[type="submit"]{
+    width: 60px;
+}
+.add-product .form-product div input#title,
+.add-product .form-product div input#regular_price,
+.add-product .form-product div input#sale_price,
+.add-product .form-product div input#image
+{
+    width: 400px;
+}
+.add-product .form-product p{
+    margin-bottom: 5px;
+}
+.manager .action,
+.add-categories .action{
+    margin: 10px 0;
+}
+.manager .action a{
+    padding: 5px;
+}
+.manager table {
+    width: 80%;
+    margin: 0 auto;
+}
+.manager table tr td,
+.manager table th{
+    border: 1px solid;
+    text-align: center;
+}
+.manager ul li{
+    list-style: none;
+    padding: 5px 0;
+}

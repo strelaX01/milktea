@@ -1,0 +1,33 @@
+.checkout .billding_order{
+    margin-top: 35px;
+}
+.checkout .billding_order h3,
+.checkout .billding_order .action{
+    text-align: center;
+}
+.checkout .billding_order h4{
+    margin-bottom: 20px;
+}
+.checkout .billding_order .action{
+    margin-bottom: 25px;
+}
+.checkout .billding_order .billding_detail .col-12{
+    margin-bottom: 15px;
+}
+.checkout .billding_order .billding_detail input{
+    width: 100%;
+}
+.checkout .billding_order .your_order{
+    padding-left: 50px;
+}
+.checkout .billding_order .your_order table{
+    width: 100%;
+}
+.checkout .billding_order .your_order table tr td,
+.checkout .billding_order .your_order table th{
+    text-align: center;
+    border: 1px solid;
+}
+.checkout .billding_order .your_order h5{
+    margin-top: 20px;
+}

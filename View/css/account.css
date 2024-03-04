@@ -1,0 +1,33 @@
+.account{
+    margin-top: 30px;
+}
+.account h3,
+.account h4{
+    text-align: center;
+}
+.account h3{
+    font-size: 24px;
+}
+.account h4{
+    font-size: 38px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+.account .action{
+    text-align: center;
+}
+.account .action a{
+    padding: 0 5px;
+}
+.account table{
+    margin: 0 auto;
+}
+.account table tr td,
+.account table th{
+    border: 1px solid;
+    text-align: center;
+}
+.account table td.quantity,
+.account table td.sum{
+    width: 90px;
+}
